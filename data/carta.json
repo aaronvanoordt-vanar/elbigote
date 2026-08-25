@@ -1,0 +1,1538 @@
+{
+  "negocio": "El Bigote Coffee & Waffles",
+  "moneda": "PEN",
+  "categorias": [
+    {
+      "id": "waffles-dulces",
+      "categoria_es": "Waffles dulces",
+      "categoria_en": "Sweet waffles",
+      "filtros": [
+        "waffles",
+        "dulce"
+      ],
+      "nota_es": null,
+      "nota_en": null,
+      "platos": [
+        {
+          "nombre_es": "Original",
+          "nombre_en": "Original",
+          "precio_pen": "14",
+          "descripcion_es": "Waffle con miel de abeja o maple o manjar blanco o salsa de chocolate.",
+          "descripcion_en": "Waffle with honey, maple syrup, dulce de leche or chocolate sauce.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Encanelado",
+          "nombre_en": "Cinnamon",
+          "precio_pen": "17",
+          "descripcion_es": "Canela, salsa de canela y glaseado de queso crema.",
+          "descripcion_en": "Cinnamon, cinnamon sauce and cream cheese glaze.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Tres leches",
+          "nombre_en": "Tres leches",
+          "precio_pen": "19",
+          "descripcion_es": "Waffle relleno de una deliciosa salsa tres leches. Acompañado de manjar blanco y crema chantilly.",
+          "descripcion_en": "Waffle filled with tres leches sauce, served with dulce de leche and whipped cream.",
+          "etiquetas": [
+            "top"
+          ]
+        },
+        {
+          "nombre_es": "Frutas frescas",
+          "nombre_en": "Fresh fruit",
+          "precio_pen": "18",
+          "descripcion_es": "Frutas de la estación con miel de maple o miel de abeja o crema pastelera.",
+          "descripcion_en": "Seasonal fruit with maple syrup, honey or pastry cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Caramel banana",
+          "nombre_en": "Caramel banana",
+          "precio_pen": "19",
+          "descripcion_es": "Plátano, salsa de canela, mix de nueces, salsa de chocolate, crema pastelera, brownie bites.",
+          "descripcion_en": "Banana, cinnamon sauce, mixed nuts, chocolate sauce, pastry cream and brownie bites.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Del bosque",
+          "nombre_en": "Forest berries",
+          "precio_pen": "21",
+          "descripcion_es": "Fresas, arándanos, crema pastelera y mermelada de frutos rojos.",
+          "descripcion_en": "Strawberries, blueberries, pastry cream and red berry jam.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Cheesecake tropical",
+          "nombre_en": "Tropical cheesecake",
+          "precio_pen": "20",
+          "descripcion_es": "Waffle con glaseado de queso crema, coulis de mango, piña y menta, crumble, mango y piña.",
+          "descripcion_en": "Waffle with cream cheese glaze, mango coulis, pineapple and mint, crumble, mango and pineapple.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Tartaleta de fresa",
+          "nombre_en": "Strawberry tart",
+          "precio_pen": "20",
+          "descripcion_es": "Fresas, crema pastelera, crumble y mermelada de fresa.",
+          "descripcion_en": "Strawberries, pastry cream, crumble and strawberry jam.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Cheesecake de maracumango",
+          "nombre_en": "Passion fruit & mango cheesecake",
+          "precio_pen": "17",
+          "descripcion_es": "Waffle con glaseado de queso crema, coulis de maracumango, mango y crumble.",
+          "descripcion_en": "Waffle with cream cheese glaze, passion fruit and mango coulis, mango and crumble.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Cheesecake de frutos rojos",
+          "nombre_en": "Red berry cheesecake",
+          "precio_pen": "21",
+          "descripcion_es": "Waffle con glaseado de queso crema, mermelada de frutos rojos, arándanos, fresas y crumble.",
+          "descripcion_en": "Waffle with cream cheese glaze, red berry jam, blueberries, strawberries and crumble.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Arma tu waffle",
+          "nombre_en": "Build your own waffle",
+          "precio_pen": "24",
+          "descripcion_es": "Escoge 5 toppings: fresas, arándanos, plátano, aguaymanto, mango, piña, manzana acaramelada, crumble, manjar blanco, salsa de chocolate, leche condensada, miel de abeja o de maple, crema pastelera o chantilly, crema de avellanas, brownie bites, mermelada de frutos rojos o de fresa, coulis de maracumango, chispas de chocolate, mix de nueces.",
+          "descripcion_en": "Pick 5 toppings: strawberries, blueberries, banana, goldenberry, mango, pineapple, caramelised apple, crumble, dulce de leche, chocolate sauce, condensed milk, honey or maple syrup, pastry or whipped cream, hazelnut spread, brownie bites, red berry or strawberry jam, passion fruit and mango coulis, chocolate chips, mixed nuts.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "waffles-salados",
+      "categoria_es": "Waffles salados",
+      "categoria_en": "Savoury waffles",
+      "filtros": [
+        "waffles",
+        "salado"
+      ],
+      "nota_es": "Acompaña tu waffle con ensalada o papas chips. Adicionales: tocino, huevo, queso, jamón, palta o papas chips +4.",
+      "nota_en": "Served with salad or crisps. Extras: bacon, egg, cheese, ham, avocado or crisps +4.",
+      "platos": [
+        {
+          "nombre_es": "Popeye",
+          "nombre_en": "Popeye",
+          "precio_pen": "17",
+          "descripcion_es": "Waffle relleno de espinaca, tocino y queso + mayonesa Bigote.",
+          "descripcion_en": "Waffle filled with spinach, bacon and cheese + house Bigote mayo.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Champipollo",
+          "nombre_en": "Champipollo",
+          "precio_pen": "23",
+          "descripcion_es": "Champiñones, crema de leche y especias.",
+          "descripcion_en": "Chicken with mushrooms, cream and spices.",
+          "etiquetas": [
+            "top"
+          ]
+        },
+        {
+          "nombre_es": "Tejano",
+          "nombre_en": "Tejano",
+          "precio_pen": "24",
+          "descripcion_es": "Waffle relleno de lomito ahumado, chorizo, bondiola y coronado con queso cheddar y un huevo frito + salsa BBQ.",
+          "descripcion_en": "Waffle filled with smoked pork loin, chorizo and pork shoulder, topped with cheddar and a fried egg + BBQ sauce.",
+          "etiquetas": [
+            "top"
+          ]
+        },
+        {
+          "nombre_es": "Americano",
+          "nombre_en": "American",
+          "precio_pen": "19",
+          "descripcion_es": "Waffle original, tocino, huevos a tu gusto, miel de maple.",
+          "descripcion_en": "Original waffle, bacon, eggs your way and maple syrup.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Mixto a la inglesa",
+          "nombre_en": "English mixto",
+          "precio_pen": "19",
+          "descripcion_es": "Waffle relleno de jamón, queso, orégano y coronado con un huevo frito + mayonesa Bigote.",
+          "descripcion_en": "Waffle filled with ham, cheese and oregano, topped with a fried egg + house Bigote mayo.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Waffle pollo BBQ",
+          "nombre_en": "BBQ chicken waffle",
+          "precio_pen": "23",
+          "descripcion_es": "Waffle sándwich con filete de pollo a la plancha, salsa BBQ, queso cheddar, tocino, tomate y lechuga.",
+          "descripcion_en": "Waffle sandwich with grilled chicken fillet, BBQ sauce, cheddar, bacon, tomato and lettuce.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Club sándwich",
+          "nombre_en": "Club sandwich",
+          "precio_pen": "26",
+          "descripcion_es": "Waffle sándwich con pollo deshilachado, jamón, queso andino, palta, tocino, huevo, tomate, lechuga y mayonesa.",
+          "descripcion_en": "Waffle sandwich with pulled chicken, ham, Andean cheese, avocado, bacon, egg, tomato, lettuce and mayo.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Waffle pollo crispy",
+          "nombre_en": "Crispy chicken waffle",
+          "precio_pen": "25",
+          "descripcion_es": "Waffle sándwich con pollo empanizado, queso cheddar, tocino, mayonesa Bigote, tomate y lechuga.",
+          "descripcion_en": "Waffle sandwich with breaded chicken, cheddar, bacon, house Bigote mayo, tomato and lettuce.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Waffle burger",
+          "nombre_en": "Waffle burger",
+          "precio_pen": "23",
+          "descripcion_es": "Waffle sándwich con hamburguesa de la casa, tocino, queso cheddar, tomate y lechuga.",
+          "descripcion_en": "Waffle sandwich with our house burger, bacon, cheddar, tomato and lettuce.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "waffles-helado",
+      "categoria_es": "Waffles con helado",
+      "categoria_en": "Waffles with ice cream",
+      "filtros": [
+        "waffles",
+        "dulce"
+      ],
+      "nota_es": "Sabores de helado: chocolate, vainilla, fresa, cookies and cream o lúcuma. Adicionales: miel, salsa de chocolate, manjar o crema +3 · fruta, mix de nueces, brownie o manzanas +4 · crema de avellanas +5 · bola de helado +6.",
+      "nota_en": "Ice cream flavours: chocolate, vanilla, strawberry, cookies and cream or lúcuma. Extras: honey, chocolate sauce, dulce de leche or cream +3 · fruit, mixed nuts, brownie or apples +4 · hazelnut spread +5 · scoop of ice cream +6.",
+      "platos": [
+        {
+          "nombre_es": "Applewaffle",
+          "nombre_en": "Applewaffle",
+          "precio_pen": "22",
+          "descripcion_es": "Manzanas acarameladas, crema pastelera, crumble, canela y helado artesanal.",
+          "descripcion_en": "Caramelised apples, pastry cream, crumble, cinnamon and artisan ice cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Avellanas",
+          "nombre_en": "Hazelnut",
+          "precio_pen": "24",
+          "descripcion_es": "Fresas, plátano, crema de avellanas y helado artesanal.",
+          "descripcion_en": "Strawberries, banana, hazelnut spread and artisan ice cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Berry waffle",
+          "nombre_en": "Berry waffle",
+          "precio_pen": "22",
+          "descripcion_es": "Arándanos en la masa, miel de maple, crema chantilly y helado artesanal.",
+          "descripcion_en": "Blueberries in the batter, maple syrup, whipped cream and artisan ice cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Waffle tiramisú",
+          "nombre_en": "Tiramisu waffle",
+          "precio_pen": "21",
+          "descripcion_es": "Waffle con sabor a café, glaseado de queso crema, cobertura de chocolate rallado y helado artesanal.",
+          "descripcion_en": "Coffee-flavoured waffle, cream cheese glaze, grated chocolate and artisan ice cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Chocoloco",
+          "nombre_en": "Chocoloco",
+          "precio_pen": "21",
+          "descripcion_es": "Chispas de chocolate en la masa, crema chantilly, salsa de chocolate, brownie bites y helado artesanal.",
+          "descripcion_en": "Chocolate chips in the batter, whipped cream, chocolate sauce, brownie bites and artisan ice cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Waffle Bigote",
+          "nombre_en": "Bigote waffle",
+          "precio_pen": "24",
+          "descripcion_es": "Crema de avellanas, brownie bites, salsa de chocolate y helado artesanal.",
+          "descripcion_en": "Hazelnut spread, brownie bites, chocolate sauce and artisan ice cream.",
+          "etiquetas": [
+            "top"
+          ]
+        },
+        {
+          "nombre_es": "Cookies n' cream",
+          "nombre_en": "Cookies n' cream",
+          "precio_pen": "21",
+          "descripcion_es": "Galletas oreo, salsa de chocolate, crema chantilly y helado artesanal.",
+          "descripcion_en": "Oreo cookies, chocolate sauce, whipped cream and artisan ice cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Red velvet",
+          "nombre_en": "Red velvet",
+          "precio_pen": "21",
+          "descripcion_es": "Inspirado en la famosa torta red velvet, con glaseado de queso crema, arándanos, mix de nueces y helado artesanal.",
+          "descripcion_en": "Inspired by the classic red velvet cake: cream cheese glaze, blueberries, mixed nuts and artisan ice cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Dark waffle",
+          "nombre_en": "Dark waffle",
+          "precio_pen": "21",
+          "descripcion_es": "Masa de chocolate, fresas, arándanos, crema chantilly, salsa de chocolate y helado artesanal.",
+          "descripcion_en": "Chocolate batter, strawberries, blueberries, whipped cream, chocolate sauce and artisan ice cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Popular",
+          "nombre_en": "Popular",
+          "precio_pen": "28",
+          "descripcion_es": "Crema de avellanas, fresas, brownie bites, salsa de chocolate o miel de maple y helado artesanal.",
+          "descripcion_en": "Hazelnut spread, strawberries, brownie bites, chocolate sauce or maple syrup and artisan ice cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Banana split",
+          "nombre_en": "Banana split",
+          "precio_pen": "21",
+          "descripcion_es": "Plátano, salsa de chocolate, crema chantilly y helado artesanal.",
+          "descripcion_en": "Banana, chocolate sauce, whipped cream and artisan ice cream.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "desayunos",
+      "categoria_es": "Desayunos y brunch",
+      "categoria_en": "Breakfast & brunch",
+      "filtros": [
+        "desayuno"
+      ],
+      "nota_es": "Disponibles hasta la 1 p.m. Incluyen café americano o espresso. Cambia tu café por cappuccino +2, infusión Bigote +2 o chocolate caliente +3. Jugo de naranja en lugar del jugo del día +2.5. Porción de pan 3 · porción de mantequilla 3.",
+      "nota_en": "Served until 1 p.m. Includes americano or espresso. Swap your coffee for cappuccino +2, Bigote herbal tea +2 or hot chocolate +3. Orange juice instead of juice of the day +2.5. Bread 3 · butter 3.",
+      "platos": [
+        {
+          "nombre_es": "El Bigote",
+          "nombre_en": "El Bigote",
+          "precio_pen": "27",
+          "descripcion_es": "Waffle original, 2 huevos, tocino, café y jugo del día.",
+          "descripcion_en": "Original waffle, 2 eggs, bacon, coffee and juice of the day.",
+          "etiquetas": [
+            "top"
+          ]
+        },
+        {
+          "nombre_es": "El apaltado",
+          "nombre_en": "The avocado one",
+          "precio_pen": "23",
+          "descripcion_es": "Pan tostado, palta, tomate, 2 huevos, café y jugo del día.",
+          "descripcion_en": "Toast, avocado, tomato, 2 eggs, coffee and juice of the day.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "El light",
+          "nombre_en": "The light one",
+          "precio_pen": "18",
+          "descripcion_es": "3 huevos, pan tostado, café y jugo del día.",
+          "descripcion_en": "3 eggs, toast, coffee and juice of the day.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "El frutal",
+          "nombre_en": "The fruity one",
+          "precio_pen": "28",
+          "descripcion_es": "Ensalada de frutas, 2 huevos, pan tostado y café.",
+          "descripcion_en": "Fruit salad, 2 eggs, toast and coffee.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Desayuno mixto a la inglesa",
+          "nombre_en": "English mixto breakfast",
+          "precio_pen": "23",
+          "descripcion_es": "Waffle relleno de jamón, queso y orégano, acompañado de un huevo frito, café y jugo del día.",
+          "descripcion_en": "Waffle filled with ham, cheese and oregano, with a fried egg, coffee and juice of the day.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Desayuno completo",
+          "nombre_en": "Full breakfast",
+          "precio_pen": "33",
+          "descripcion_es": "Waffle original, 2 huevos, tocino, mini bowl de frutas, café y jugo del día.",
+          "descripcion_en": "Original waffle, 2 eggs, bacon, a small fruit bowl, coffee and juice of the day.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "El capresse",
+          "nombre_en": "The caprese one",
+          "precio_pen": "18",
+          "descripcion_es": "Sándwich capresse, café y jugo del día.",
+          "descripcion_en": "Caprese sandwich, coffee and juice of the day.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Los revoltosos · jamón",
+          "nombre_en": "Scrambled eggs · ham",
+          "precio_pen": "15",
+          "descripcion_es": "Pan tostado y huevos revueltos con jamón.",
+          "descripcion_en": "Toast and scrambled eggs with ham.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Los revoltosos · espinaca y mozzarella",
+          "nombre_en": "Scrambled eggs · spinach & mozzarella",
+          "precio_pen": "17",
+          "descripcion_es": "Pan tostado y huevos revueltos con espinaca y queso mozzarella.",
+          "descripcion_en": "Toast and scrambled eggs with spinach and mozzarella.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Los revoltosos · chorizo o tocino",
+          "nombre_en": "Scrambled eggs · chorizo or bacon",
+          "precio_pen": "17",
+          "descripcion_es": "Pan tostado y huevos revueltos con chorizo o tocino.",
+          "descripcion_en": "Toast and scrambled eggs with chorizo or bacon.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Los revoltosos · albahaca, tomate y mozzarella",
+          "nombre_en": "Scrambled eggs · basil, tomato & mozzarella",
+          "precio_pen": "17",
+          "descripcion_es": "Pan tostado y huevos revueltos con albahaca, tomate y queso mozzarella.",
+          "descripcion_en": "Toast and scrambled eggs with basil, tomato and mozzarella.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Ensalada de frutas",
+          "nombre_en": "Fruit salad",
+          "precio_pen": "18",
+          "descripcion_es": "Frutas de la estación, granola y miel de abeja.",
+          "descripcion_en": "Seasonal fruit, granola and honey.",
+          "etiquetas": [
+            "veg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "categoria_es": "Sándwiches bigotones",
+      "categoria_en": "Bigote sandwiches",
+      "filtros": [
+        "salado"
+      ],
+      "nota_es": null,
+      "nota_en": null,
+      "platos": [
+        {
+          "nombre_es": "Triple casero",
+          "nombre_en": "Homemade triple",
+          "precio_pen": "15",
+          "descripcion_es": "Palta, huevo, tomate y mayonesa en pan ciabatta.",
+          "descripcion_en": "Avocado, egg, tomato and mayo on ciabatta.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Mixto grill",
+          "nombre_en": "Grilled mixto",
+          "precio_pen": "15",
+          "descripcion_es": "Jamón, queso andino y mantequilla en pan ciabatta.",
+          "descripcion_en": "Ham, Andean cheese and butter on ciabatta.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Capresse",
+          "nombre_en": "Caprese",
+          "precio_pen": "15",
+          "descripcion_es": "Queso mozzarella, albahaca y tomate en pan chapla o ciabatta.",
+          "descripcion_en": "Mozzarella, basil and tomato on chapla flatbread or ciabatta.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Capresse power",
+          "nombre_en": "Caprese power",
+          "precio_pen": "17",
+          "descripcion_es": "Queso mozzarella, tomate, albahaca, aceite de oliva y pollo deshilachado en pan chapla o ciabatta.",
+          "descripcion_en": "Mozzarella, tomato, basil, olive oil and pulled chicken on chapla flatbread or ciabatta.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Tres jamones",
+          "nombre_en": "Three hams",
+          "precio_pen": "18",
+          "descripcion_es": "Lomito ahumado, jamón inglés, bondiola, queso edam, tomate, lechuga y mayonesa en pan ciabatta.",
+          "descripcion_en": "Smoked pork loin, English ham, pork shoulder, edam, tomato, lettuce and mayo on ciabatta.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Mediterráneo",
+          "nombre_en": "Mediterranean",
+          "precio_pen": "20",
+          "descripcion_es": "Pollo a la plancha, queso mozzarella, champiñones, pimientos y salsa picantita en pan pita o ciabatta.",
+          "descripcion_en": "Grilled chicken, mozzarella, mushrooms, peppers and a mildly spicy sauce on pita or ciabatta.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Pollo crispy",
+          "nombre_en": "Crispy chicken",
+          "precio_pen": "22",
+          "descripcion_es": "Pechuga empanizada, queso cheddar, tocino, mayonesa Bigote, tomate y lechuga en pan brioche, con papas en hojuelas.",
+          "descripcion_en": "Breaded chicken breast, cheddar, bacon, house Bigote mayo, tomato and lettuce on brioche, with crisps.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Mexicano",
+          "nombre_en": "Mexican",
+          "precio_pen": "17",
+          "descripcion_es": "Pollo a la plancha, guacamole, queso cheddar y pimientos en pan pita o ciabatta.",
+          "descripcion_en": "Grilled chicken, guacamole, cheddar and peppers on pita or ciabatta.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Pollo popeye",
+          "nombre_en": "Popeye chicken",
+          "precio_pen": "19",
+          "descripcion_es": "Pollo a la plancha, espinaca, queso mozzarella, orégano y mayonesa Bigote en pan ciabatta.",
+          "descripcion_en": "Grilled chicken, spinach, mozzarella, oregano and house Bigote mayo on ciabatta.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Caesar",
+          "nombre_en": "Caesar",
+          "precio_pen": "18",
+          "descripcion_es": "Pollo a la plancha, salsa caesar, tocino, queso parmesano y lechuga en pan ciabatta o chapla.",
+          "descripcion_en": "Grilled chicken, caesar dressing, bacon, parmesan and lettuce on ciabatta or chapla flatbread.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Pollo BBQ",
+          "nombre_en": "BBQ chicken",
+          "precio_pen": "22",
+          "descripcion_es": "Pollo a la plancha, tocino, queso cheddar, salsa BBQ, tomate y lechuga en pan ciabatta.",
+          "descripcion_en": "Grilled chicken, bacon, cheddar, BBQ sauce, tomato and lettuce on ciabatta.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Pollo palteado",
+          "nombre_en": "Chicken & avocado",
+          "precio_pen": "18",
+          "descripcion_es": "Pollo deshilachado en mayonesa con palta, lechuga y tomate en pan ciabatta.",
+          "descripcion_en": "Pulled chicken in mayo with avocado, lettuce and tomato on ciabatta.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Sándwich Romeo",
+          "nombre_en": "Romeo sandwich",
+          "precio_pen": "20",
+          "descripcion_es": "Carne de hamburguesa con un toque de salsa napolitana, queso edam, tomate y lechuga en pan ciabatta.",
+          "descripcion_en": "Burger patty with a touch of napolitana sauce, edam, tomato and lettuce on ciabatta.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "hamburguesas",
+      "categoria_es": "Hamburguesas",
+      "categoria_en": "Burgers",
+      "filtros": [
+        "salado"
+      ],
+      "nota_es": "Todas se sirven con papas chips.",
+      "nota_en": "All served with crisps.",
+      "platos": [
+        {
+          "nombre_es": "Clásica",
+          "nombre_en": "Classic",
+          "precio_pen": "19",
+          "descripcion_es": "Hamburguesa de la casa, queso cheddar, tomate y lechuga + papas chips.",
+          "descripcion_en": "House burger, cheddar, tomato and lettuce + crisps.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Royal",
+          "nombre_en": "Royal",
+          "precio_pen": "22",
+          "descripcion_es": "Hamburguesa de la casa, queso edam, jamón, huevo frito, tomate y lechuga + papas chips.",
+          "descripcion_en": "House burger, edam, ham, fried egg, tomato and lettuce + crisps.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Mexicana",
+          "nombre_en": "Mexican",
+          "precio_pen": "22",
+          "descripcion_es": "Hamburguesa de la casa, guacamole, queso cheddar, tomate y lechuga + papas chips.",
+          "descripcion_en": "House burger, guacamole, cheddar, tomato and lettuce + crisps.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "BBQ",
+          "nombre_en": "BBQ",
+          "precio_pen": "23",
+          "descripcion_es": "Hamburguesa de la casa, queso cheddar, salsa BBQ, tocino, tomate y lechuga + papas chips.",
+          "descripcion_en": "House burger, cheddar, BBQ sauce, bacon, tomato and lettuce + crisps.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Anticuchera",
+          "nombre_en": "Anticuchera",
+          "precio_pen": "22",
+          "descripcion_es": "Hamburguesa de la casa, queso edam, salsa anticuchera, champiñones, tomate y lechuga + papas chips.",
+          "descripcion_en": "House burger, edam, anticuchera sauce, mushrooms, tomato and lettuce + crisps.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "wraps",
+      "categoria_es": "Wraps",
+      "categoria_en": "Wraps",
+      "filtros": [
+        "salado"
+      ],
+      "nota_es": null,
+      "nota_en": null,
+      "platos": [
+        {
+          "nombre_es": "Wrap caesar",
+          "nombre_en": "Caesar wrap",
+          "precio_pen": "21",
+          "descripcion_es": "Pollo deshilachado en salsa caesar, tocino, lechuga y queso parmesano.",
+          "descripcion_en": "Pulled chicken in caesar dressing, bacon, lettuce and parmesan.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Wrap veggie",
+          "nombre_en": "Veggie wrap",
+          "precio_pen": "23",
+          "descripcion_es": "Palta, champiñones salteados, queso, tomate, zanahoria y lechuga con salsa honey mustard.",
+          "descripcion_en": "Avocado, sautéed mushrooms, cheese, tomato, carrot and lettuce with honey mustard.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Wrap oriental",
+          "nombre_en": "Oriental wrap",
+          "precio_pen": "21",
+          "descripcion_es": "Pollo empanizado, mix de nueces, pimiento, pepino, zanahoria, ajonjolí, lechuga y tomate con honey mustard.",
+          "descripcion_en": "Breaded chicken, mixed nuts, pepper, cucumber, carrot, sesame, lettuce and tomato with honey mustard.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Wrap spicy chicken",
+          "nombre_en": "Spicy chicken wrap",
+          "precio_pen": "21",
+          "descripcion_es": "Pollo deshilachado en salsa picante, queso cheddar, chips de papa, tomate y lechuga.",
+          "descripcion_en": "Pulled chicken in spicy sauce, cheddar, potato crisps, tomato and lettuce.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Wrap palteado",
+          "nombre_en": "Chicken & avocado wrap",
+          "precio_pen": "24",
+          "descripcion_es": "Pollo deshilachado en mayonesa, palta, tomate, queso y lechuga.",
+          "descripcion_en": "Pulled chicken in mayo, avocado, tomato, cheese and lettuce.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Wrap anticuchero",
+          "nombre_en": "Anticuchero wrap",
+          "precio_pen": "21",
+          "descripcion_es": "Pollo en cubos en salsa anticuchera, champiñones, queso, ajonjolí, lechuga y tomate.",
+          "descripcion_en": "Diced chicken in anticuchera sauce, mushrooms, cheese, sesame, lettuce and tomato.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Wrap burger",
+          "nombre_en": "Burger wrap",
+          "precio_pen": "23",
+          "descripcion_es": "Hamburguesa en trozos, guacamole, queso cheddar, tocino, tomate y lechuga.",
+          "descripcion_en": "Chopped burger, guacamole, cheddar, bacon, tomato and lettuce.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Wrap thais",
+          "nombre_en": "Thai wrap",
+          "precio_pen": "23",
+          "descripcion_es": "Pollo empanizado, queso, huevo duro, tocino, tomate y lechuga con salsa honey mustard.",
+          "descripcion_en": "Breaded chicken, cheese, boiled egg, bacon, tomato and lettuce with honey mustard.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Wrap pollo BBQ",
+          "nombre_en": "BBQ chicken wrap",
+          "precio_pen": "24",
+          "descripcion_es": "Pollo deshilachado en salsa BBQ, queso cheddar, tocino, tomate y lechuga.",
+          "descripcion_en": "Pulled chicken in BBQ sauce, cheddar, bacon, tomato and lettuce.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Wrap club sándwich",
+          "nombre_en": "Club sandwich wrap",
+          "precio_pen": "26",
+          "descripcion_es": "Pollo deshilachado en mayonesa, queso, tocino, jamón, palta, tomate y lechuga.",
+          "descripcion_en": "Pulled chicken in mayo, cheese, bacon, ham, avocado, tomato and lettuce.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "ensaladas",
+      "categoria_es": "Ensaladas",
+      "categoria_en": "Salads",
+      "filtros": [
+        "salado"
+      ],
+      "nota_es": "Escoge un aliño: honey mustard, caesar, de la casa, aceite de oliva o anticuchero. Adicional de pollo 7 · adicional de palta 4.",
+      "nota_en": "Choose a dressing: honey mustard, caesar, house, olive oil or anticuchero. Extra chicken 7 · extra avocado 4.",
+      "platos": [
+        {
+          "nombre_es": "Caesar",
+          "nombre_en": "Caesar",
+          "precio_pen": "24",
+          "descripcion_es": "Mix de lechugas, tocino, pollo a la plancha, croutones y queso parmesano.",
+          "descripcion_en": "Mixed leaves, bacon, grilled chicken, croutons and parmesan.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Thais",
+          "nombre_en": "Thai",
+          "precio_pen": "25",
+          "descripcion_es": "Mix de lechugas, tomate, queso, tocino, tortillas chips, pollo empanizado y huevo duro.",
+          "descripcion_en": "Mixed leaves, tomato, cheese, bacon, tortilla chips, breaded chicken and boiled egg.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Balana",
+          "nombre_en": "Balana",
+          "precio_pen": "24",
+          "descripcion_es": "Mix de lechugas y espinaca, pechuga a la plancha, tocino, manzanas y mix de nueces.",
+          "descripcion_en": "Mixed leaves and spinach, grilled chicken breast, bacon, apple and mixed nuts.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Cobb",
+          "nombre_en": "Cobb",
+          "precio_pen": "28",
+          "descripcion_es": "Mix de lechugas, tomate, palta, tocino, pollo en cubos, queso y huevo duro.",
+          "descripcion_en": "Mixed leaves, tomato, avocado, bacon, diced chicken, cheese and boiled egg.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Campestre",
+          "nombre_en": "Campestre",
+          "precio_pen": "24",
+          "descripcion_es": "Mix de lechugas y espinaca, pechuga a la plancha, palta, pepino, tomate y zanahoria.",
+          "descripcion_en": "Mixed leaves and spinach, grilled chicken breast, avocado, cucumber, tomato and carrot.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Pastor",
+          "nombre_en": "Pastor",
+          "precio_pen": "30",
+          "descripcion_es": "Mix de lechugas y espinaca, pimiento, tomate, zanahoria, palta y dos pechugas de pollo.",
+          "descripcion_en": "Mixed leaves and spinach, pepper, tomato, carrot, avocado and two chicken breasts.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Oriental",
+          "nombre_en": "Oriental",
+          "precio_pen": "24",
+          "descripcion_es": "Mix de lechugas y espinaca, pollo empanizado, pimiento, zanahoria, pepino, tortillas chips, ajonjolí, gajos de naranja y mix de nueces.",
+          "descripcion_en": "Mixed leaves and spinach, breaded chicken, pepper, carrot, cucumber, tortilla chips, sesame, orange segments and mixed nuts.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "pastas",
+      "categoria_es": "Pastas",
+      "categoria_en": "Pasta",
+      "filtros": [
+        "salado"
+      ],
+      "nota_es": "Extras: queso parmesano 3 · tocino 4 · pollo 7 · hamburguesa 9. La milanesa napolitana es una pechuga empanizada con salsa de tomate y queso mozzarella.",
+      "nota_en": "Extras: parmesan 3 · bacon 4 · chicken 7 · burger 9. Milanesa napolitana is a breaded chicken breast with tomato sauce and mozzarella.",
+      "platos": [
+        {
+          "nombre_es": "A lo Alfredo",
+          "nombre_en": "Alfredo",
+          "precio_pen": "22",
+          "descripcion_es": "Macarrones con salsa blanca y jamón.",
+          "descripcion_en": "Macaroni in white sauce with ham.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Champipollo",
+          "nombre_en": "Champipollo",
+          "precio_pen": "24",
+          "descripcion_es": "Macarrones con salsa blanca, pollo en cubos, champiñones, queso y especias.",
+          "descripcion_en": "Macaroni in white sauce with diced chicken, mushrooms, cheese and spices.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Mac and cheese",
+          "nombre_en": "Mac and cheese",
+          "precio_pen": "22",
+          "descripcion_es": "Macarrones con queso mozzarella, cheddar y andino, crema de leche y especias.",
+          "descripcion_en": "Macaroni with mozzarella, cheddar and Andean cheese, cream and spices.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Pasta caesar (fría)",
+          "nombre_en": "Caesar pasta (cold)",
+          "precio_pen": "24",
+          "descripcion_es": "Macarrones con salsa caesar, lechuga en tiras, tocino, queso parmesano y pechuga empanizada.",
+          "descripcion_en": "Macaroni in caesar dressing with shredded lettuce, bacon, parmesan and breaded chicken.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Pasta mediterránea",
+          "nombre_en": "Mediterranean pasta",
+          "precio_pen": "24",
+          "descripcion_es": "Macarrones con salsa de tomate, queso mozzarella, albahaca, champiñones y pollo en cubos.",
+          "descripcion_en": "Macaroni in tomato sauce with mozzarella, basil, mushrooms and diced chicken.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Pasta bianca",
+          "nombre_en": "Pasta bianca",
+          "precio_pen": "26",
+          "descripcion_es": "Macarrones con salsa blanca, acompañados de milanesa a la napolitana.",
+          "descripcion_en": "Macaroni in white sauce, served with milanesa napolitana.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Pasta napolitana",
+          "nombre_en": "Pasta napolitana",
+          "precio_pen": "26",
+          "descripcion_es": "Macarrones con salsa de tomate, acompañados de milanesa a la napolitana.",
+          "descripcion_en": "Macaroni in tomato sauce, served with milanesa napolitana.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "piqueos",
+      "categoria_es": "Piqueos para compartir",
+      "categoria_en": "Sharing plates",
+      "filtros": [
+        "salado",
+        "dulce"
+      ],
+      "nota_es": null,
+      "nota_en": null,
+      "platos": [
+        {
+          "nombre_es": "Quesadillas de queso",
+          "nombre_en": "Cheese quesadillas",
+          "precio_pen": "26",
+          "descripcion_es": "Quesadillas rellenas de queso mozzarella y cheddar, acompañadas con guacamole. Añade pollo 5 · tocino 4 · guacamole 4.",
+          "descripcion_en": "Quesadillas filled with mozzarella and cheddar, served with guacamole. Add chicken 5 · bacon 4 · guacamole 4.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Queso frito",
+          "nombre_en": "Fried cheese",
+          "precio_pen": "23",
+          "descripcion_es": "8 triángulos de queso cajamarquino fritos. Añade guacamole 4.",
+          "descripcion_en": "8 fried triangles of Cajamarca cheese. Add guacamole 4.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Dedos de pollo con yucas fritas",
+          "nombre_en": "Chicken fingers with fried cassava",
+          "precio_pen": "32",
+          "descripcion_es": "8 dedos de pollo acompañados con yucas fritas y salsas.",
+          "descripcion_en": "8 chicken fingers with fried cassava and dipping sauces.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Yucas fritas",
+          "nombre_en": "Fried cassava",
+          "precio_pen": "18",
+          "descripcion_es": "Yucas fritas acompañadas con salsas de la casa.",
+          "descripcion_en": "Fried cassava with house sauces.",
+          "etiquetas": [
+            "veg"
+          ]
+        },
+        {
+          "nombre_es": "Piqueo Bigote",
+          "nombre_en": "Bigote sharing platter",
+          "precio_pen": "28",
+          "descripcion_es": "Waffle bites, fresas, plátanos, malvaviscos y brownie bites acompañados con salsa de chocolate.",
+          "descripcion_en": "Waffle bites, strawberries, banana, marshmallows and brownie bites with chocolate sauce.",
+          "etiquetas": [
+            "veg",
+            "top"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "categoria_es": "Café",
+      "categoria_en": "Coffee",
+      "filtros": [
+        "bebidas",
+        "cafe"
+      ],
+      "nota_es": "Precios de 8 oz a 12 oz donde se indican dos cifras. Adicionales: shot de leche 2 · shot de café 3 · leche de almendras +3 · taza de leche +5.",
+      "nota_en": "Two figures means 8 oz to 12 oz. Extras: milk shot 2 · coffee shot 3 · almond milk +3 · cup of milk +5.",
+      "platos": [
+        {
+          "nombre_es": "Espresso",
+          "nombre_en": "Espresso",
+          "precio_pen": "5.5",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Espresso doble",
+          "nombre_en": "Double espresso",
+          "precio_pen": "7.5",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Cortadito",
+          "nombre_en": "Cortado",
+          "precio_pen": "7.5",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Americano",
+          "nombre_en": "Americano",
+          "precio_pen": "6.5 – 8.5",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Cappuccino",
+          "nombre_en": "Cappuccino",
+          "precio_pen": "8 – 11",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Cappuccino de naranja",
+          "nombre_en": "Orange cappuccino",
+          "precio_pen": "11 – 14",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Mocaccino",
+          "nombre_en": "Mocaccino",
+          "precio_pen": "11",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Latte",
+          "nombre_en": "Latte",
+          "precio_pen": "9.5",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Prensa francesa",
+          "nombre_en": "French press",
+          "precio_pen": "9",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Flat white",
+          "nombre_en": "Flat white",
+          "precio_pen": "9",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Nuteccino",
+          "nombre_en": "Nuteccino",
+          "precio_pen": "16",
+          "descripcion_es": "Cappuccino de crema de avellanas.",
+          "descripcion_en": "Hazelnut cream cappuccino.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Latte encanelado",
+          "nombre_en": "Cinnamon latte",
+          "precio_pen": "13",
+          "descripcion_es": "Café con glaseado de vainilla, salsa de canela, crumble y chantilly.",
+          "descripcion_en": "Coffee with vanilla glaze, cinnamon sauce, crumble and whipped cream.",
+          "etiquetas": [
+            "top"
+          ]
+        },
+        {
+          "nombre_es": "Café helado",
+          "nombre_en": "Iced coffee",
+          "precio_pen": "10",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Café helado y naranja",
+          "nombre_en": "Iced coffee & orange",
+          "precio_pen": "12",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Café helado y maracuyá",
+          "nombre_en": "Iced coffee & passion fruit",
+          "precio_pen": "12",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Latte helado",
+          "nombre_en": "Iced latte",
+          "precio_pen": "11",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Moka helado",
+          "nombre_en": "Iced mocha",
+          "precio_pen": "14",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Latte encanelado helado",
+          "nombre_en": "Iced cinnamon latte",
+          "precio_pen": "15",
+          "descripcion_es": "Café con glaseado de vainilla, salsa de canela, crumble y chantilly.",
+          "descripcion_en": "Coffee with vanilla glaze, cinnamon sauce, crumble and whipped cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Affogato",
+          "nombre_en": "Affogato",
+          "precio_pen": "13",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Affogato de lúcuma",
+          "nombre_en": "Lúcuma affogato",
+          "precio_pen": "13",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Affogato de matcha",
+          "nombre_en": "Matcha affogato",
+          "precio_pen": "13",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Frappé de café",
+          "nombre_en": "Coffee frappé",
+          "precio_pen": "14",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Frappé de chocolate",
+          "nombre_en": "Chocolate frappé",
+          "precio_pen": "17",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Frappé de oreo",
+          "nombre_en": "Oreo frappé",
+          "precio_pen": "17",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "chocolate",
+      "categoria_es": "Chocolate caliente",
+      "categoria_en": "Hot chocolate",
+      "filtros": [
+        "bebidas",
+        "dulce"
+      ],
+      "nota_es": null,
+      "nota_en": null,
+      "platos": [
+        {
+          "nombre_es": "Chocolate caliente",
+          "nombre_en": "Hot chocolate",
+          "precio_pen": "11",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Chocolate Bigote",
+          "nombre_en": "Bigote hot chocolate",
+          "precio_pen": "14",
+          "descripcion_es": "Chocolate caliente, malvaviscos y crema chantilly.",
+          "descripcion_en": "Hot chocolate, marshmallows and whipped cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Chocobrownie",
+          "nombre_en": "Chocobrownie",
+          "precio_pen": "17",
+          "descripcion_es": "Chocolate caliente, brownie, leche condensada y crema chantilly.",
+          "descripcion_en": "Hot chocolate, brownie, condensed milk and whipped cream.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "categoria_es": "Jugos, frozens y limonadas",
+      "categoria_en": "Juices, frozens & lemonades",
+      "filtros": [
+        "bebidas"
+      ],
+      "nota_es": "Frutas a escoger: mango, piña, papaya, plátano, aguaymanto, maracuyá, fresa y naranja (+2). Combinaciones recomendadas: fresa, piña y papaya · mango, piña y limón · mango y maracuyá · mango, fresa y naranja · fresa y plátano.",
+      "nota_en": "Choose from: mango, pineapple, papaya, banana, goldenberry, passion fruit, strawberry and orange (+2). House combinations: strawberry, pineapple & papaya · mango, pineapple & lime · mango & passion fruit · mango, strawberry & orange · strawberry & banana.",
+      "platos": [
+        {
+          "nombre_es": "Jugo de 1 fruta",
+          "nombre_en": "Single fruit juice",
+          "precio_pen": "12",
+          "descripcion_es": "Con leche +2.",
+          "descripcion_en": "With milk +2.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Jugo de 2 frutas",
+          "nombre_en": "Two fruit juice",
+          "precio_pen": "14",
+          "descripcion_es": "Con leche +2.",
+          "descripcion_en": "With milk +2.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Jugo de 3 frutas",
+          "nombre_en": "Three fruit juice",
+          "precio_pen": "16",
+          "descripcion_es": "Con leche +2.",
+          "descripcion_en": "With milk +2.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Frozen de piña, naranja y menta",
+          "nombre_en": "Pineapple, orange & mint frozen",
+          "precio_pen": "14",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Frozen de naranja y piña",
+          "nombre_en": "Orange & pineapple frozen",
+          "precio_pen": "14",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Frozen de maracuyá y mango",
+          "nombre_en": "Passion fruit & mango frozen",
+          "precio_pen": "14",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": [
+            "top"
+          ]
+        },
+        {
+          "nombre_es": "Frozen de fresa y maracuyá",
+          "nombre_en": "Strawberry & passion fruit frozen",
+          "precio_pen": "14",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Frozen de una fruta",
+          "nombre_en": "Single fruit frozen",
+          "precio_pen": "13",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Limonada",
+          "nombre_en": "Lemonade",
+          "precio_pen": "8",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Limonada con menta",
+          "nombre_en": "Mint lemonade",
+          "precio_pen": "9",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Limonada con hierba luisa",
+          "nombre_en": "Lemon verbena lemonade",
+          "precio_pen": "9",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Limonada con hierba buena",
+          "nombre_en": "Spearmint lemonade",
+          "precio_pen": "9",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Limonada con fresa",
+          "nombre_en": "Strawberry lemonade",
+          "precio_pen": "10",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Limonada frozen",
+          "nombre_en": "Frozen lemonade",
+          "precio_pen": "10",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Limonada con flor de Jamaica y hierba buena",
+          "nombre_en": "Hibiscus & spearmint lemonade",
+          "precio_pen": "14",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Limonada con frutos rojos",
+          "nombre_en": "Red berry lemonade",
+          "precio_pen": "14",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Limonada cítrica",
+          "nombre_en": "Citrus lemonade",
+          "precio_pen": "15",
+          "descripcion_es": "Zumo de limón, flor de Jamaica, naranja y hielo.",
+          "descripcion_en": "Lime juice, hibiscus, orange and ice.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Flor de Jamaica, menta y fresas",
+          "nombre_en": "Hibiscus, mint & strawberry",
+          "precio_pen": "12",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Soda de arándanos",
+          "nombre_en": "Blueberry soda",
+          "precio_pen": "12",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Piña y hierba luisa",
+          "nombre_en": "Pineapple & lemon verbena",
+          "precio_pen": "13",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Té helado",
+          "nombre_en": "Iced tea",
+          "precio_pen": "8",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Té helado de naranja",
+          "nombre_en": "Orange iced tea",
+          "precio_pen": "8",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Agua mineral",
+          "nombre_en": "Sparkling water",
+          "precio_pen": "5",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "infusiones",
+      "categoria_es": "Infusiones",
+      "categoria_en": "Herbal teas",
+      "filtros": [
+        "bebidas"
+      ],
+      "nota_es": "Las infusiones servidas con frutas y hierbas cuestan 9. Los filtrantes de la casa: taza 9 · heladas 11.",
+      "nota_en": "Infusions served with fruit and herbs are 9. House blends: cup 9 · iced 11.",
+      "platos": [
+        {
+          "nombre_es": "Bigote",
+          "nombre_en": "Bigote",
+          "precio_pen": "9",
+          "descripcion_es": "Hierba buena, hierba luisa, manzanilla, canela, miel, aguaymanto, fresa y manzana.",
+          "descripcion_en": "Spearmint, lemon verbena, chamomile, cinnamon, honey, goldenberry, strawberry and apple.",
+          "etiquetas": [
+            "top"
+          ]
+        },
+        {
+          "nombre_es": "Cítrica",
+          "nombre_en": "Citrus",
+          "precio_pen": "9",
+          "descripcion_es": "Té negro, menta, piña, aguaymanto, miel, canela y limón.",
+          "descripcion_en": "Black tea, mint, pineapple, goldenberry, honey, cinnamon and lime.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Berries",
+          "nombre_en": "Berries",
+          "precio_pen": "9",
+          "descripcion_es": "Menta, hierba buena, miel, fresa, arándano y aguaymanto.",
+          "descripcion_en": "Mint, spearmint, honey, strawberry, blueberry and goldenberry.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Frutal",
+          "nombre_en": "Fruity",
+          "precio_pen": "9",
+          "descripcion_es": "Manzanilla, canela, miel, naranja, piña, aguaymanto y manzana deshidratada.",
+          "descripcion_en": "Chamomile, cinnamon, honey, orange, pineapple, goldenberry and dried apple.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Del bosque",
+          "nombre_en": "Forest",
+          "precio_pen": "9",
+          "descripcion_es": "Flor de Jamaica, anís estrella, manzanas y fresas deshidratadas, miel de abeja, arándanos y canela.",
+          "descripcion_en": "Hibiscus, star anise, dried apple and strawberry, honey, blueberries and cinnamon.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "De piña",
+          "nombre_en": "Pineapple",
+          "precio_pen": "9",
+          "descripcion_es": "Infusión de piña, canela, clavo de olor, hierba luisa, manzanilla, limón y miel de abeja.",
+          "descripcion_en": "Pineapple, cinnamon, clove, lemon verbena, chamomile, lime and honey.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "De maracuyá",
+          "nombre_en": "Passion fruit",
+          "precio_pen": "9",
+          "descripcion_es": "Infusión de maracuyá, hierba luisa, manzanilla, miel de abeja y canela.",
+          "descripcion_en": "Passion fruit, lemon verbena, chamomile, honey and cinnamon.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "De naranja",
+          "nombre_en": "Orange",
+          "precio_pen": "9",
+          "descripcion_es": "Infusión de naranja, menta, canela en rama, cardamomo y miel de abeja.",
+          "descripcion_en": "Orange, mint, cinnamon stick, cardamom and honey.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Infusión de los Andes",
+          "nombre_en": "Andean blend",
+          "precio_pen": "9 – 11",
+          "descripcion_es": "Té verde, menta, muña y cáscara de naranja.",
+          "descripcion_en": "Green tea, mint, muña and orange peel.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Infusión morada",
+          "nombre_en": "Purple blend",
+          "precio_pen": "9 – 11",
+          "descripcion_es": "Flor de Jamaica, maíz morado, piña y pasas.",
+          "descripcion_en": "Hibiscus, purple corn, pineapple and raisins.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Manzana tropical",
+          "nombre_en": "Tropical apple",
+          "precio_pen": "9 – 11",
+          "descripcion_es": "Té verde, flor de Jamaica, canela y manzana.",
+          "descripcion_en": "Green tea, hibiscus, cinnamon and apple.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Flor cítrica",
+          "nombre_en": "Citrus flower",
+          "precio_pen": "9 – 11",
+          "descripcion_es": "Flor de Jamaica, cáscaras de limón con naranja y menta.",
+          "descripcion_en": "Hibiscus, lime and orange peel with mint.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Matcha latte",
+          "nombre_en": "Matcha latte",
+          "precio_pen": "9 – 11",
+          "descripcion_es": "Té verde pulverizado y leche.",
+          "descripcion_en": "Powdered green tea and milk.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Chai latte",
+          "nombre_en": "Chai latte",
+          "precio_pen": "9 – 11",
+          "descripcion_es": "Indian chai y leche.",
+          "descripcion_en": "Indian chai and milk.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Indian chai",
+          "nombre_en": "Indian chai",
+          "precio_pen": "9 – 11",
+          "descripcion_es": "Té negro, cardamomo, jengibre, pimienta rosada, clavo de olor y canela.",
+          "descripcion_en": "Black tea, cardamom, ginger, pink pepper, clove and cinnamon.",
+          "etiquetas": []
+        }
+      ]
+    },
+    {
+      "id": "milkshakes",
+      "categoria_es": "Milkshakes",
+      "categoria_en": "Milkshakes",
+      "filtros": [
+        "bebidas",
+        "dulce"
+      ],
+      "nota_es": null,
+      "nota_en": null,
+      "platos": [
+        {
+          "nombre_es": "Vainilla",
+          "nombre_en": "Vanilla",
+          "precio_pen": "17",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Chocolate",
+          "nombre_en": "Chocolate",
+          "precio_pen": "17",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Fresa",
+          "nombre_en": "Strawberry",
+          "precio_pen": "17",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Lúcuma",
+          "nombre_en": "Lúcuma",
+          "precio_pen": "17",
+          "descripcion_es": null,
+          "descripcion_en": null,
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Vainilla latte",
+          "nombre_en": "Vanilla latte",
+          "precio_pen": "20",
+          "descripcion_es": "Helado de vainilla y café con crema chantilly.",
+          "descripcion_en": "Vanilla ice cream and coffee with whipped cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Frutos rojos",
+          "nombre_en": "Red berries",
+          "precio_pen": "20",
+          "descripcion_es": "Helado de vainilla y mermelada de frutos rojos con crema chantilly.",
+          "descripcion_en": "Vanilla ice cream and red berry jam with whipped cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Brownie",
+          "nombre_en": "Brownie",
+          "precio_pen": "20",
+          "descripcion_es": "Helado de chocolate y vainilla licuado con brownie, acompañado de crema chantilly.",
+          "descripcion_en": "Chocolate and vanilla ice cream blended with brownie, with whipped cream.",
+          "etiquetas": []
+        },
+        {
+          "nombre_es": "Oreo",
+          "nombre_en": "Oreo",
+          "precio_pen": "20",
+          "descripcion_es": "Helado de oreo, chocolate, galleta oreo y vainilla.",
+          "descripcion_en": "Oreo ice cream, chocolate, oreo biscuit and vanilla.",
+          "etiquetas": []
+        }
+      ]
+    }
+  ]
+}

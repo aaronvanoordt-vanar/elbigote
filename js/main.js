@@ -5,32 +5,86 @@
 (function () {
   'use strict';
 
-  var $  = function (sel, ctx) { return (ctx || document).querySelector(sel); };
-  var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
+  var $  = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raiz = document.documentElement;
 
-  /* ── Configuración del negocio ──────────────────────────────────────── */
-  var HORARIO = { abre: 9 * 60, cierra: 21 * 60 + 15 };  // minutos desde medianoche
+  /* ── Configuración ──────────────────────────────────────────────────── */
+  var HORARIO = { abre: 9 * 60, cierra: 21 * 60 + 15 };   // minutos desde medianoche
   var ZONA = 'America/Lima';
-  var DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
 
-  /* ── 1. Año en el pie ───────────────────────────────────────────────── */
+  /*  Reels destacados de Instagram.
+      El identificador es lo que va después de /reel/ en la URL:
+      https://www.instagram.com/reel/DE7rVejufGc/  →  'DE7rVejufGc'
+
+      ⚠️  Estos tres vienen de la maqueta anterior y NO se han podido
+      comprobar. Sustitúyelos por los reels que quieras destacar y revisa
+      que cada uno cargue. Ver CONTENIDO.md. */
+  var REELS = [
+    { id: 'DE7rVejufGc', poster: 'assets/fotos/portada.jpg',
+      es: 'Waffles con helado', en: 'Waffles with ice cream' },
+    { id: 'DF3GPlURVrS', poster: 'assets/fotos/galeria-02-ensaladas.jpg',
+      es: 'Almuerzos en Barranco', en: 'Lunch in Barranco' },
+    { id: 'CpNoAPdA74i', poster: 'assets/fotos/galeria-05-mesa.jpg',
+      es: 'El local por dentro', en: 'Inside the café' }
+  ];
+
+  var TEXTOS = {
+    abierto:      { es: 'Abierto ahora · hasta las ',      en: 'Open now · until ' },
+    cierraPronto: { es: 'Cerramos en ',                     en: 'Closing in ' },
+    min:          { es: ' min',                             en: ' min' },
+    abreHoy:      { es: 'Cerrado · abrimos hoy a las ',     en: 'Closed · opens today at ' },
+    abreManana:   { es: 'Cerrado · abrimos mañana a las ',  en: 'Closed · opens tomorrow at ' },
+    hoy:          { es: 'hoy',                              en: 'today' },
+    plato:        { es: ' plato',                           en: ' dish' },
+    platos:       { es: ' platos',                          en: ' dishes' },
+    verReel:      { es: 'Ver el reel: ',                    en: 'Play reel: ' }
+  };
+
+  var idioma = 'es';
+  function t(clave) { return TEXTOS[clave][idioma] || TEXTOS[clave].es; }
+
+  /* ── 1. Idioma ──────────────────────────────────────────────────────── */
+  function aplicarIdioma(nuevo, guardar) {
+    idioma = (nuevo === 'en') ? 'en' : 'es';
+    raiz.setAttribute('data-lang', idioma);
+    raiz.setAttribute('lang', idioma === 'en' ? 'en' : 'es-PE');
+    $$('[data-set-lang]').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === idioma));
+    });
+    var buscador = $('#menuSearch');
+    if (buscador) {
+      buscador.setAttribute('placeholder',
+        buscador.getAttribute(idioma === 'en' ? 'data-ph-en' : 'data-ph-es') || '');
+    }
+    if (guardar) { try { localStorage.setItem('elbigote-idioma', idioma); } catch (e) {} }
+    pintarEstado();
+    actualizarContadores();
+    pintarReels();
+  }
+
+  var guardado = null;
+  try { guardado = localStorage.getItem('elbigote-idioma'); } catch (e) {}
+  if (!guardado && (navigator.language || '').slice(0, 2).toLowerCase() !== 'es') guardado = 'en';
+
+  $$('[data-set-lang]').forEach(function (b) {
+    b.addEventListener('click', function () { aplicarIdioma(b.getAttribute('data-set-lang'), true); });
+  });
+
+  /* ── 2. Año ─────────────────────────────────────────────────────────── */
   $$('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
 
-  /* ── 2. Estado abierto / cerrado en hora de Lima ─────────────────────
-     Perú no aplica horario de verano, pero usamos Intl para no depender
-     de la zona horaria del visitante.                                    */
+  /* ── 3. Abierto / cerrado en hora de Lima ───────────────────────────── */
   function horaLima() {
     try {
       var partes = new Intl.DateTimeFormat('en-US', {
-        timeZone: ZONA, hour12: false,
-        weekday: 'short', hour: '2-digit', minute: '2-digit'
+        timeZone: ZONA, hour12: false, weekday: 'short', hour: '2-digit', minute: '2-digit'
       }).formatToParts(new Date());
       var v = {};
       partes.forEach(function (p) { v[p.type] = p.value; });
       var mapa = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
-      var h = parseInt(v.hour, 10);
-      if (h === 24) h = 0;                      // algunos motores devuelven 24
+      var h = parseInt(v.hour, 10); if (h === 24) h = 0;
       return { dia: mapa[v.weekday], minutos: h * 60 + parseInt(v.minute, 10) };
     } catch (e) {
       var d = new Date();
@@ -44,221 +98,254 @@
   }
 
   function pintarEstado() {
-    var ahora = horaLima();
-    var estado, texto;
-
+    var ahora = horaLima(), estado, texto;
     if (ahora.minutos >= HORARIO.abre && ahora.minutos < HORARIO.cierra) {
       var quedan = HORARIO.cierra - ahora.minutos;
-      if (quedan <= 60) { estado = 'soon'; texto = 'Cerramos en ' + quedan + ' min'; }
-      else { estado = 'open'; texto = 'Abierto ahora · hasta las ' + hhmm(HORARIO.cierra); }
+      if (quedan <= 60) { estado = 'soon'; texto = t('cierraPronto') + quedan + t('min'); }
+      else { estado = 'open'; texto = t('abierto') + hhmm(HORARIO.cierra); }
     } else {
       estado = 'closed';
-      texto = ahora.minutos < HORARIO.abre
-        ? 'Cerrado · abrimos hoy a las ' + hhmm(HORARIO.abre)
-        : 'Cerrado · abrimos mañana a las ' + hhmm(HORARIO.abre);
+      texto = (ahora.minutos < HORARIO.abre ? t('abreHoy') : t('abreManana')) + hhmm(HORARIO.abre);
     }
-
     $$('[data-status]').forEach(function (el) {
       el.setAttribute('data-state', estado);
-      var t = $('[data-status-text]', el);
-      if (t) t.textContent = texto;
+      var s = $('[data-status-text]', el);
+      if (s) s.textContent = texto;
     });
-
     $$('.hours__row').forEach(function (row) {
       row.setAttribute('data-today', String(Number(row.getAttribute('data-day')) === ahora.dia));
+      row.style.setProperty('--hoy', '"' + t('hoy') + '"');
     });
   }
-  pintarEstado();
   setInterval(pintarEstado, 60000);
 
-  /* ── 3. Cabecera fija ───────────────────────────────────────────────── */
-  var header = $('#siteHeader');
-  var actionBar = $('#actionBar');
-  var ultimoScroll = 0;
-
+  /* ── 4. Cabecera y barra de acciones ────────────────────────────────── */
+  var header = $('#siteHeader'), actionBar = $('#actionBar'), ticking = false;
   function alScroll() {
     var y = window.scrollY || window.pageYOffset;
     if (header) header.setAttribute('data-stuck', String(y > 40));
-    // La barra de acción aparece una vez pasada la portada
     if (actionBar) actionBar.setAttribute('data-show', String(y > window.innerHeight * 0.6));
-    ultimoScroll = y;
   }
-  var ticking = false;
   window.addEventListener('scroll', function () {
-    if (!ticking) {
-      window.requestAnimationFrame(function () { alScroll(); ticking = false; });
-      ticking = true;
-    }
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () { alScroll(); ticking = false; });
   }, { passive: true });
   alScroll();
 
-  /* ── 4. Panel de navegación móvil ───────────────────────────────────── */
-  var burger = $('#burger');
-  var drawer = $('#drawer');
-
+  /* ── 5. Panel móvil ─────────────────────────────────────────────────── */
+  var burger = $('#burger'), drawer = $('#drawer');
   function abrirDrawer(abrir) {
     if (!burger || !drawer) return;
     drawer.setAttribute('data-open', String(abrir));
     burger.setAttribute('aria-expanded', String(abrir));
-    burger.setAttribute('aria-label', abrir ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
     document.body.style.overflow = abrir ? 'hidden' : '';
     if (abrir) {
-      // El panel entra con una transición de visibilidad: enfocar antes no surte efecto.
-      setTimeout(function () {
-        var primero = $('.drawer__link', drawer);
-        if (primero && drawer.getAttribute('data-open') === 'true') primero.focus();
+      setTimeout(function () {   // el panel entra con transición de visibilidad
+        var p = $('.drawer__link', drawer);
+        if (p && drawer.getAttribute('data-open') === 'true') p.focus();
       }, 320);
     }
   }
-
-  if (burger) {
-    burger.addEventListener('click', function () {
-      abrirDrawer(drawer.getAttribute('data-open') !== 'true');
-    });
-  }
+  if (burger) burger.addEventListener('click', function () {
+    abrirDrawer(drawer.getAttribute('data-open') !== 'true');
+  });
   $$('.drawer__link, .drawer__foot a').forEach(function (a) {
     a.addEventListener('click', function () { abrirDrawer(false); });
   });
 
-  /* ── 5. Filtros de la carta ─────────────────────────────────────────── */
+  /* ── 6. Carta: pestañas, buscador y contadores ──────────────────────── */
   var grupos = $$('.menu-group');
   var vacio = $('[data-menu-empty]');
   var buscador = $('#menuSearch');
   var filtroActivo = 'all';
 
-  // Contador de platos por sección
-  grupos.forEach(function (g) {
-    var n = $$('.menu-item', g).length;
-    var c = $('[data-count]', g);
-    if (c) c.textContent = n + (n === 1 ? ' plato' : ' platos');
-  });
-
   function normalizar(s) {
     return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 
+  function actualizarContadores() {
+    grupos.forEach(function (g) {
+      var n = $$('.menu-item', g).filter(function (i) { return !i.hidden; }).length;
+      var c = $('[data-count]', g);
+      if (c) c.textContent = n + (n === 1 ? t('plato') : t('platos'));
+    });
+  }
+
   function aplicarFiltros() {
     var q = normalizar(buscador ? buscador.value.trim() : '');
-    var visiblesTotal = 0;
-
+    var total = 0;
     grupos.forEach(function (grupo) {
       var cats = grupo.getAttribute('data-cat') || '';
-      var pasaCat = filtroActivo === 'all' || cats.indexOf(filtroActivo) !== -1;
-      var visiblesGrupo = 0;
-
+      var pasaCat = filtroActivo === 'all' || cats.split(' ').indexOf(filtroActivo) !== -1;
+      var visibles = 0;
       $$('.menu-item', grupo).forEach(function (item) {
-        var texto = normalizar(item.getAttribute('data-name') + ' ' + item.textContent);
-        var pasaTexto = !q || texto.indexOf(q) !== -1;
-        var mostrar = pasaCat && pasaTexto;
+        var texto = item.getAttribute('data-buscar') || '';
+        var mostrar = pasaCat && (!q || texto.indexOf(q) !== -1);
         item.hidden = !mostrar;
-        if (mostrar) visiblesGrupo++;
+        if (mostrar) visibles++;
       });
-
-      grupo.hidden = visiblesGrupo === 0;
-      visiblesTotal += visiblesGrupo;
-
-      var c = $('[data-count]', grupo);
-      if (c) c.textContent = visiblesGrupo + (visiblesGrupo === 1 ? ' plato' : ' platos');
+      grupo.hidden = visibles === 0;
+      total += visibles;
     });
-
-    if (vacio) vacio.hidden = visiblesTotal > 0;
+    if (vacio) vacio.hidden = total > 0;
+    actualizarContadores();
+    if (typeof estadoPlegado === 'function') estadoPlegado();
   }
 
   $$('.tab').forEach(function (tab) {
     tab.addEventListener('click', function () {
-      $$('.tab').forEach(function (t) { t.setAttribute('aria-selected', 'false'); });
+      $$('.tab').forEach(function (x) { x.setAttribute('aria-selected', 'false'); });
       tab.setAttribute('aria-selected', 'true');
       filtroActivo = tab.getAttribute('data-filter');
       aplicarFiltros();
     });
   });
-
   if (buscador) {
-    var debounce;
+    var deb;
     buscador.addEventListener('input', function () {
-      clearTimeout(debounce);
-      debounce = setTimeout(aplicarFiltros, 120);
+      clearTimeout(deb); deb = setTimeout(aplicarFiltros, 120);
     });
   }
 
-  /* ── 6. Preguntas frecuentes ────────────────────────────────────────── */
+
+  /* ── 6b. Carta plegable en móvil ────────────────────────────────────
+     Con 163 platos, dejarlo todo abierto en un teléfono son treinta mil
+     píxeles de scroll. Se pliega por debajo de 860 px; al buscar o
+     filtrar se abre solo para que los resultados se vean. */
+  var esMovil = window.matchMedia('(max-width: 860px)');
+  var plegadoManual = {};
+
+  function claveGrupo(g) {
+    var lista = $('.menu-list', g);
+    return lista ? lista.id : (g.getAttribute('aria-labelledby') || '');
+  }
+
+  function estadoPlegado() {
+    var buscando = !!(buscador && buscador.value.trim()) || filtroActivo !== 'all';
+    grupos.forEach(function (g, i) {
+      var abrir;
+      if (!esMovil.matches || buscando) abrir = true;
+      else if (claveGrupo(g) in plegadoManual) abrir = plegadoManual[claveGrupo(g)];
+      else abrir = (i === 0);                       // la primera sección arranca abierta
+      g.setAttribute('data-collapsed', String(!abrir));
+      var b = $('.menu-group__toggle', g);
+      if (b) b.setAttribute('aria-expanded', String(abrir));
+    });
+  }
+
+  grupos.forEach(function (g) {
+    var b = $('.menu-group__toggle', g);
+    if (!b) return;
+    b.addEventListener('click', function () {
+      if (!esMovil.matches) return;               // en escritorio no se pliega
+      var abierto = g.getAttribute('data-collapsed') !== 'true';
+      plegadoManual[claveGrupo(g)] = !abierto;
+      g.setAttribute('data-collapsed', String(abierto));
+      b.setAttribute('aria-expanded', String(!abierto));
+    });
+  });
+  if (esMovil.addEventListener) esMovil.addEventListener('change', function () { plegadoManual = {}; estadoPlegado(); });
+
+  /* ── 7. Preguntas frecuentes ────────────────────────────────────────── */
   $$('.faq__item').forEach(function (item) {
-    var boton = $('.faq__q', item);
-    if (!boton) return;
-    boton.addEventListener('click', function () {
+    var b = $('.faq__q', item);
+    if (!b) return;
+    b.addEventListener('click', function () {
       var abierto = item.getAttribute('data-open') === 'true';
       item.setAttribute('data-open', String(!abierto));
-      boton.setAttribute('aria-expanded', String(!abierto));
+      b.setAttribute('aria-expanded', String(!abierto));
     });
   });
 
-  /* ── 7. Fotos: si un archivo falta, dejamos ver el marcador de marca ── */
-  $$('img[data-photo]').forEach(function (img) {
+  /* ── 8. Fotos que no cargan ─────────────────────────────────────────── */
+  $$('.frame img, .hero__figura img').forEach(function (img) {
     function fallar() { img.hidden = true; }
     img.addEventListener('error', fallar);
-    // Si ya falló antes de que registráramos el listener
     if (img.complete && img.naturalWidth === 0) fallar();
   });
 
-  /* ── 8. Visor de galería ────────────────────────────────────────────── */
-  var lightbox = $('#lightbox');
-  var lbImg = $('#lightboxImg');
-  var lbCap = $('#lightboxCap');
-  var botonesFoto = $$('[data-lightbox]');
-  var fotos = botonesFoto.map(function (b) {
-    var img = $('img', b);
-    return { src: img ? img.getAttribute('src') : '', alt: img ? img.getAttribute('alt') : '' };
+  /* ── 9. Reels: el iframe de Instagram sólo se carga al pulsar ───────── */
+  var rejilla = $('#reels-grid');
+
+  function pintarReels() {
+    if (!rejilla) return;
+    // No repintar si ya hay un vídeo reproduciéndose
+    if ($('iframe', rejilla)) return;
+    rejilla.innerHTML = '';
+    REELS.forEach(function (r) {
+      var art = document.createElement('article');
+      art.className = 'reel';
+      var etiqueta = r[idioma] || r.es;
+      art.innerHTML =
+        '<button class="reel__facade" type="button" aria-label="' + t('verReel') + etiqueta + '">' +
+          '<img src="' + r.poster + '" alt="" loading="lazy" decoding="async">' +
+          '<span class="reel__play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' +
+            '<path d="M8 5.14v13.72a1 1 0 0 0 1.54.84l10.28-6.86a1 1 0 0 0 0-1.68L9.54 4.3A1 1 0 0 0 8 5.14Z"/>' +
+          '</svg></span>' +
+          '<span class="reel__cap">' + etiqueta + '<small>Instagram · @elbigotecoffeewaffles</small></span>' +
+        '</button>';
+      $('.reel__facade', art).addEventListener('click', function () {
+        var f = document.createElement('iframe');
+        f.src = 'https://www.instagram.com/reel/' + r.id + '/embed/';
+        f.title = etiqueta;
+        f.loading = 'lazy';
+        f.setAttribute('allow', 'autoplay; encrypted-media; clipboard-write');
+        f.setAttribute('allowfullscreen', '');
+        art.innerHTML = '';
+        art.appendChild(f);
+      });
+      rejilla.appendChild(art);
+    });
+  }
+
+  /* ── 10. Visor de galería ───────────────────────────────────────────── */
+  var lightbox = $('#lightbox'), lbImg = $('#lightboxImg'), lbCap = $('#lightboxCap');
+  var botones = $$('[data-lightbox]');
+  var fotos = botones.map(function (b) {
+    var i = $('img', b);
+    return { src: i ? i.getAttribute('src') : '', alt: i ? i.getAttribute('alt') : '' };
   });
-  var indice = 0;
-  var origenFoco = null;
+  var indice = 0, origenFoco = null;
 
   function mostrarFoto(i) {
     if (!fotos.length) return;
     indice = (i + fotos.length) % fotos.length;
-    var f = fotos[indice];
-    lbImg.setAttribute('src', f.src);
-    lbImg.setAttribute('alt', f.alt);
-    lbCap.innerHTML = '<b>' + (indice + 1) + ' / ' + fotos.length + '</b> · ' + f.alt;
+    lbImg.setAttribute('src', fotos[indice].src);
+    lbImg.setAttribute('alt', fotos[indice].alt);
+    lbCap.textContent = (indice + 1) + ' / ' + fotos.length + ' · ' + fotos[indice].alt;
   }
-
   function abrirVisor(i) {
     if (!lightbox) return;
     origenFoco = document.activeElement;
     mostrarFoto(i);
     lightbox.setAttribute('data-open', 'true');
     document.body.style.overflow = 'hidden';
-    var cerrar = $('[data-lb-close]', lightbox);
-    if (cerrar) cerrar.focus();
+    var c = $('[data-lb-close]', lightbox); if (c) c.focus();
   }
-
   function cerrarVisor() {
     if (!lightbox) return;
     lightbox.setAttribute('data-open', 'false');
     document.body.style.overflow = '';
     if (origenFoco && origenFoco.focus) origenFoco.focus();
   }
-
-  botonesFoto.forEach(function (boton, i) {
-    boton.addEventListener('click', function () { abrirVisor(i); });
-  });
+  botones.forEach(function (b, i) { b.addEventListener('click', function () { abrirVisor(i); }); });
 
   if (lightbox) {
-    var cerrarBtn = $('[data-lb-close]', lightbox);
-    var prevBtn = $('[data-lb-prev]', lightbox);
-    var nextBtn = $('[data-lb-next]', lightbox);
-    if (cerrarBtn) cerrarBtn.addEventListener('click', cerrarVisor);
-    if (prevBtn) prevBtn.addEventListener('click', function () { mostrarFoto(indice - 1); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { mostrarFoto(indice + 1); });
+    var cerrar = $('[data-lb-close]', lightbox);
+    var prev = $('[data-lb-prev]', lightbox);
+    var next = $('[data-lb-next]', lightbox);
+    if (cerrar) cerrar.addEventListener('click', cerrarVisor);
+    if (prev) prev.addEventListener('click', function () { mostrarFoto(indice - 1); });
+    if (next) next.addEventListener('click', function () { mostrarFoto(indice + 1); });
     lightbox.addEventListener('click', function (e) { if (e.target === lightbox) cerrarVisor(); });
-
-    // Mantiene el foco dentro del visor mientras está abierto
     lightbox.addEventListener('keydown', function (e) {
       if (e.key !== 'Tab') return;
-      var focos = $$('button', lightbox).filter(function (b) { return b.offsetParent !== null; });
-      if (!focos.length) return;
-      var primero = focos[0], ultimo = focos[focos.length - 1];
-      if (e.shiftKey && document.activeElement === primero) { e.preventDefault(); ultimo.focus(); }
-      else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primero.focus(); }
+      var f = $$('button', lightbox).filter(function (b) { return b.offsetParent !== null; });
+      if (!f.length) return;
+      var a = f[0], z = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+      else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
     });
   }
 
@@ -275,42 +362,42 @@
     }
   });
 
-  /* ── 9. Aparición al hacer scroll ───────────────────────────────────── */
+  /* ── 11. Aparición al hacer scroll ──────────────────────────────────── */
   var animables = $$('.reveal, .reveal-stagger');
   if (reduceMotion || !('IntersectionObserver' in window)) {
     animables.forEach(function (el) { el.setAttribute('data-visible', 'true'); });
   } else {
-    var observador = new IntersectionObserver(function (entradas) {
-      entradas.forEach(function (entrada) {
-        if (!entrada.isIntersecting) return;
-        entrada.target.setAttribute('data-visible', 'true');
-        observador.unobserve(entrada.target);
+    var obs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.setAttribute('data-visible', 'true');
+        obs.unobserve(e.target);
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
-    animables.forEach(function (el) { observador.observe(el); });
-    // Índice para escalonar los hijos
-    $$('.reveal-stagger').forEach(function (grupo) {
-      Array.prototype.forEach.call(grupo.children, function (hijo, i) {
-        if (!hijo.style.getPropertyValue('--i')) hijo.style.setProperty('--i', i);
-      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -60px 0px' });
+    animables.forEach(function (el) { obs.observe(el); });
+    $$('.reveal-stagger').forEach(function (g) {
+      Array.prototype.forEach.call(g.children, function (h, i) { h.style.setProperty('--i', i); });
     });
   }
 
-  /* ── 10. Sección activa en el menú ──────────────────────────────────── */
+  /* ── 12. Sección activa en el menú ──────────────────────────────────── */
   var enlaces = $$('.nav__link');
   var secciones = enlaces
     .map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); })
     .filter(Boolean);
-
   if (secciones.length && 'IntersectionObserver' in window) {
-    var spy = new IntersectionObserver(function (entradas) {
-      entradas.forEach(function (entrada) {
-        if (!entrada.isIntersecting) return;
+    var spy = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
         enlaces.forEach(function (a) {
-          a.setAttribute('aria-current', String(a.getAttribute('href') === '#' + entrada.target.id));
+          a.setAttribute('aria-current', String(a.getAttribute('href') === '#' + e.target.id));
         });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     secciones.forEach(function (s) { spy.observe(s); });
   }
+
+  /* ── Arranque ───────────────────────────────────────────────────────── */
+  aplicarIdioma(guardado || 'es', false);
+  aplicarFiltros();
 })();

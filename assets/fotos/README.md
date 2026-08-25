@@ -1,42 +1,43 @@
 # Fotos
 
-Dejar aquí las fotos con **exactamente estos nombres**. La web las recoge sola.
+Las 16 fotos del negocio, redimensionadas y optimizadas (ninguna pasa de 300 KB,
+sin metadatos, JPEG progresivo).
 
-Mientras un archivo no exista, en su hueco aparece un marcador con el bigote y la
-palabra "foto pendiente" — no se ve un icono roto, pero tampoco se puede vender así.
+Para sustituir alguna: **mantener el nombre del archivo** y, si cambia lo que se
+ve, actualizar el `alt` correspondiente en `index.html` — lo leen los lectores
+de pantalla y también Google.
 
-| Archivo | Dónde sale | Tamaño recomendado | Qué debería mostrar |
-|---|---|---|---|
-| `portada.jpg` | Fondo de la portada | 2400 × 1600 px | El local o un waffle, con espacio oscuro a la izquierda para el titular |
-| `local-01.jpg` | Historia (vertical, grande) | 1200 × 1600 px | Plano general del salón |
-| `local-02.jpg` | Historia (cuadrada) | 1200 × 1200 px | Detalle: mesas, plantas, decoración |
-| `local-03.jpg` | Historia (cuadrada) | 1200 × 1200 px | Un waffle recién servido |
-| `champipollo.jpg` | Especialidades | 1200 × 900 px | El Champipollo |
-| `tejano.jpg` | Especialidades | 1200 × 900 px | El Tejano |
-| `sandwich-gringo.jpg` | Especialidades | 1200 × 900 px | El Sandwich Gringo |
-| `galeria-01.jpg` | Galería (ancha) | 1600 × 800 px | Salón principal |
-| `galeria-02.jpg` … `galeria-06.jpg` | Galería (cuadradas) | 1200 × 1200 px | Platos, café, detalles, juegos de mesa |
-| `galeria-07.jpg` | Galería (ancha) | 1600 × 800 px | Fachada desde la avenida |
-| `galeria-08.jpg`, `galeria-09.jpg` | Galería (cuadradas) | 1200 × 1200 px | Bebidas, ambiente |
+| Archivo | Dónde sale | Proporción |
+|---|---|---|
+| `portada.jpg` | Portada y portada del primer reel | vertical 4:5 |
+| `historia-01.jpg` | Historia — clientes bajo el cartel | vertical 4:5 |
+| `historia-02.jpg` | Historia — mesa con milkshakes | vertical 4:5 |
+| `historia-03.jpg` | Historia — el perro (pet friendly) | vertical 4:5 |
+| `destacado-tres-leches.jpg` | Destacados | vertical 4:5 |
+| `destacado-maracumango.jpg` | Destacados | vertical 4:5 |
+| `destacado-pollo-bbq.jpg` | Destacados | vertical |
+| `destacado-apple-waffle.jpg` | Destacados | vertical 4:5 |
+| `galeria-01-fachada.jpg` | Galería (celda alta) | vertical |
+| `galeria-02-ensaladas.jpg` | Galería · portada del segundo reel | vertical 4:5 |
+| `galeria-03-wrap.jpg` | Galería | vertical |
+| `galeria-04-pastas.jpg` | Galería | vertical |
+| `galeria-05-mesa.jpg` | Galería · portada del tercer reel | vertical 4:5 |
+| `galeria-06-waffle.jpg` | Galería | vertical 4:5 |
+| `galeria-07-tiramisu.jpg` | Galería | vertical 4:5 |
+| `galeria-08-almuerzo.jpg` | Galería | vertical |
 
-## Recomendaciones
+## Notas
 
-- **Formato:** `.jpg` con calidad 80. Si se prefiere `.webp`, cambiar también la
-  extensión en `index.html` (buscar `assets/fotos/`).
-- **Peso:** por debajo de 300 KB cada una; la de portada puede llegar a 500 KB.
-  Una web de restaurante que tarda en cargar pierde reservas.
-- **Recorte:** la web recorta al centro (`object-fit: cover`). Dejar aire
-  alrededor del motivo principal.
-- **Orientación:** respetar el formato de la tabla. Una foto vertical en un hueco
-  ancho se recorta mucho.
-
-## Los textos alternativos
-
-Cada foto lleva su `alt` escrito en `index.html`, pensado para lo que debería
-mostrar según la tabla. Si se pone una foto distinta, **actualizar el `alt`**:
-lo leen los lectores de pantalla y también Google.
+- La web recorta al centro (`object-fit: cover`). Dejar aire alrededor del motivo.
+- Los destacados recortan en cuadrado desplazado hacia abajo
+  (`object-position: center 62%`) para no cortar por la mitad el rótulo que
+  algunas fotos llevan encima.
+- Cuatro fotos traen el nombre del plato rotulado (son piezas de Instagram).
+  Se usan donde ese rótulo funciona; la portada y los reels usan fotos limpias.
+- Si falta un archivo, la web muestra un marcador con el bigote en su hueco,
+  nunca un icono roto.
 
 ## Derechos
 
-Usar solo fotos propias del negocio o con permiso explícito. Las fotos publicadas
-en Instagram por clientes son de quien las tomó, no del local.
+Usar sólo fotos propias del negocio o con permiso. Las fotos que publican los
+clientes en Instagram son de quien las tomó.
