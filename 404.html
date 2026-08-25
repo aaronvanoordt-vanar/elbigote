@@ -7,35 +7,33 @@
 <title>Página no encontrada · El Bigote Coffee &amp; Waffles</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Outfit:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Outfit:wght@300..700&display=swap">
 <style>
   /* Autónomo a propósito: el 404 se sirve desde cualquier ruta y las
      rutas relativas a CSS no serían fiables. */
   *,*::before,*::after{box-sizing:border-box;margin:0}
   body{min-height:100svh;display:grid;place-items:center;text-align:center;padding:2rem;
-    background:radial-gradient(80% 60% at 50% 0%,rgba(192,121,58,.18),transparent 60%),#17100C;
-    color:#F6ECE0;font-family:'Outfit',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-  svg{width:min(150px,40vw);color:#E0A85C;margin-inline:auto;display:block}
-  h1{font-family:'Fraunces','Iowan Old Style',Georgia,serif;font-weight:700;
+    background:radial-gradient(80% 60% at 50% 0%,rgba(0,79,156,.35),transparent 60%),#001B3A;
+    color:#F4F8FD;font-family:'Outfit',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  img.marca{width:min(190px,52vw);margin-inline:auto;display:block}
+  h1{font-family:'Bricolage Grotesque',Helvetica,Arial,sans-serif;font-weight:800;
     font-size:clamp(2rem,1.3rem+3.4vw,3.4rem);line-height:1.05;margin:1.5rem 0 .8rem;letter-spacing:-.02em}
-  h1 em{font-style:italic;color:#E0A85C}
-  p{color:rgba(246,236,224,.68);max-width:44ch;margin-inline:auto;line-height:1.65}
+  h1 em{font-style:normal;color:#E2A33F}
+  p{color:rgba(244,248,253,.7);max-width:44ch;margin-inline:auto;line-height:1.65}
   .cta{margin-top:2rem;display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
   a{display:inline-flex;align-items:center;padding:.85rem 1.6rem;border-radius:999px;
     text-decoration:none;font-weight:600;font-size:.95rem;border:1.5px solid;transition:transform .2s,background-color .2s,color .2s}
   a:hover{transform:translateY(-2px)}
-  .gold{background:#E0A85C;color:#17100C;border-color:#E0A85C}
-  .gold:hover{background:#F5D9A8;border-color:#F5D9A8}
-  .ghost{background:transparent;color:#F6ECE0;border-color:rgba(246,236,224,.3)}
-  .ghost:hover{color:#E0A85C;border-color:#E0A85C}
-  a:focus-visible{outline:3px solid #F5D9A8;outline-offset:3px}
+  .gold{background:#E2A33F;color:#2A1B03;border-color:#E2A33F}
+  .gold:hover{background:#F6DFB4;border-color:#F6DFB4}
+  .ghost{background:transparent;color:#F4F8FD;border-color:rgba(246,236,224,.3)}
+  .ghost:hover{color:#E2A33F;border-color:#E2A33F}
+  a:focus-visible{outline:3px solid #F6DFB4;outline-offset:3px}
 </style>
 </head>
 <body>
   <main>
-    <svg viewBox="0 0 240 64" fill="currentColor" aria-hidden="true">
-      <path d="M120 26C138 14 162 8 186 12c24 4 42 20 38 36-2 8-10 10-14 4-6-10-22-20-42-21-22-1-38 9-48 19-10-10-26-20-48-19-20 1-36 11-42 21-4 6-12 4-14-4-4-16 14-32 38-36 24-4 48 2 66 14Z"/>
-    </svg>
+    <img class="marca" src="/assets/brand/logo-elbigote-claro.png" id="marca" alt="El Bigote Coffee &amp; Waffles">
     <h1>Esta página se nos <em>quemó</em></h1>
     <p>No encontramos lo que buscabas. Vuelve al inicio o escríbenos y te ayudamos.</p>
     <div class="cta">
@@ -48,7 +46,10 @@
   (function () {
     if (!/\.github\.io$/.test(location.hostname)) return;
     var base = location.pathname.split('/')[1];
-    if (base) document.getElementById('inicio').setAttribute('href', '/' + base + '/');
+    if (!base) return;
+    document.getElementById('inicio').setAttribute('href', '/' + base + '/');
+    var m = document.getElementById('marca');
+    if (m) m.setAttribute('src', '/' + base + '/assets/brand/logo-elbigote-claro.png');
   })();
 </script>
 </body>
