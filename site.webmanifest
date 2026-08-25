@@ -1,0 +1,15 @@
+{
+  "name": "El Bigote Coffee & Waffles",
+  "short_name": "El Bigote",
+  "description": "Waffles dulces y salados, café y desayunos en Barranco, Lima.",
+  "lang": "es-PE",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#17100C",
+  "theme_color": "#17100C",
+  "icons": [
+    { "src": "assets/brand/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/brand/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
